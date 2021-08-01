@@ -1,0 +1,171 @@
+
+# ██╗██████╗      ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ 
+# ██║╚════██╗    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ 
+# ██║ █████╔╝    ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+# ██║ ╚═══██╗    ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+# ██║██████╔╝    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+# ╚═╝╚═════╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝                                                               
+#
+# A customized config for i3-gaps window manager (http://www.i3wm.org) 
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+
+# Set mod key (Mod1=<Alt>, Mod4=<Super>)
+set $mod Mod4
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Colors
+set_from_resource $background          background
+set_from_resource $foreground          foreground
+
+set_from_resource $normal_background_0 background0
+set_from_resource $normal_background_1 background1
+set_from_resource $normal_background_2 background2
+set_from_resource $normal_background_3 background3
+set_from_resource $normal_background_4 background4
+
+set_from_resource $bright_background_0 background5
+set_from_resource $bright_background_1 background6
+set_from_resource $bright_background_2 background7
+set_from_resource $bright_background_3 background8
+set_from_resource $bright_background_4 background9
+
+set_from_resource $normal_black        color0
+set_from_resource $normal_red          color1
+set_from_resource $normal_green        color2
+set_from_resource $normal_yellow       color3
+set_from_resource $normal_blue         color4
+set_from_resource $normal_magenta      color5
+set_from_resource $normal_cyan         color6
+set_from_resource $normal_white        color7
+
+set_from_resource $bright_black        color8
+set_from_resource $bright_red          color9
+set_from_resource $bright_green        color10
+set_from_resource $bright_yellow       color11
+set_from_resource $bright_blue         color12
+set_from_resource $bright_magenta      color13
+set_from_resource $bright_cyan         color14
+set_from_resource $bright_white        color15
+
+# class                 border               backgr.              text        indicator           
+client.focused          $normal_background_0 $normal_background_0 $foreground $bright_background_3 
+client.focused_inactive $normal_background_3 $normal_background_3 $foreground $bright_background_3 
+client.unfocused        $normal_background_3 $normal_background_3 $foreground $bright_background_3 
+client.urgent           $normal_background_3 $bright_red          $foreground $bright_red          
+client.placeholder      $normal_background_3 $normal_background_3 $foreground $bright_background_3 
+
+# i3 specific autostart
+exec --no-startup-id nm-applet
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Autostart
+exec        --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec_always --no-startup-id fc-cache -f
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/MISC/031.*
+
+# Mouse speed
+exec_always xinput --set-prop 13 301 -0.6   # WORK
+exec_always xinput --set-prop 8 298 -0.75   # HOME
+
+# Media keys
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute        exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioPause       exec playerctl play-pause
+bindsym XF86AudioNext        exec playerctl next
+bindsym XF86AudioPrev        exec playerctl previous
+
+# Application shortcuts
+bindsym $mod+Return  exec alacritty
+bindsym $mod+shift+l exec i3lock -c 1C1C1C
+bindsym $mod+d       exec rofi -show drun -theme ~/.config/rofi/onedarkdarker.rasi -font "JetBrains Mono Medium 9"
+
+# Keyboard layouts
+bindsym $mod+Shift+x exec setxkbmap -layout us
+bindsym $mod+Shift+c exec setxkbmap -layout cz
+
+# i3 specific shortcuts
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+e exec i3-msg exit
+
+# Focus windows shortuts
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move windows shortuts
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Change layout (stacked, tabbed, toggle split
+bindsym $mod+e layout toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+
+# Resize windows
+bindsym $mod+r mode "  RESIZE  "
+
+mode "  RESIZE  "
+{
+    bindsym Left  resize shrink width  20 px or 2 ppt
+    bindsym Right resize grow   width  20 px or 2 ppt
+    bindsym Down  resize shrink height 20 px or 2 ppt
+    bindsym Up    resize grow   height 20 px or 2 ppt
+    
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+# Gaps
+for_window [class="^.*"] border pixel 2
+gaps inner 0
+gaps outer 0
