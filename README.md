@@ -13,9 +13,10 @@ Feel free to clone the repository and edit any of the files to fit your needs.
 - App Launcher: [rofi](https://github.com/davatorium/rofi) with my custom made theme
 - Fonts: [Roboto](https://fonts.google.com/specimen/Roboto) for primary text, [JetBrains Mono](https://www.jetbrains.com/lp/mono/) for terminal, [Siji](https://github.com/stark/siji) for bar icons and [Terminus](http://terminus-font.sourceforge.net/) for bar.
 - GTK: [Fluent](https://www.pling.com/p/1477941/)
+- Icons: [Papirus](https://www.gnome-look.org/p/1166289/)
 - Editor: [vim](https://www.vim.org/)
 - Color scheme: customiuzed [OneDark](https://github.com/navarasu/onedark.nvim)
-
+- Wallpaper; please see my [wallpapers](https://github.com/radimkolos/wallpapers) repository
 # Table of contents
 1. [Installation of Yay](#yayInstall)
 2. [Required packages](#requiredPackages)
