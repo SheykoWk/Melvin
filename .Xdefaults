@@ -1,3 +1,7 @@
+Xft.dpi: 96
+
+Xcursor.theme: pixelfun3
+Xcursor.size: 16
 
 ! backgrounds
 *.background0: #1a212e
