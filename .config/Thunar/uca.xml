@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1627672112485776-1</unique-id>
+	<command>alacritty</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>krusader_root</icon>
+	<name>Thunar root</name>
+	<unique-id>1627812295065063-1</unique-id>
+	<command>pkexec  thunar %f</command>
+	<description>run thunar as root</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>
