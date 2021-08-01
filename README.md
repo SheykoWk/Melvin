@@ -1,4 +1,5 @@
-# Melvin - i3wm dot files and more (mainly inspired by [Myrmidon](https://github.com/Barbarossa93/Myrmidon))
+# Melvin - i3wm dot files and more
+(mainly inspired by [Myrmidon](https://github.com/Barbarossa93/Myrmidon))
 
 This repository contains a dotfiles for my home/work setup. Please note that several packages are highly recommended and/or required to install. All of them will be listed further below.
 Feel free to clone the repository and edit any of the files to fit your needs.
@@ -12,10 +13,8 @@ Feel free to clone the repository and edit any of the files to fit your needs.
 - App Launcher: [rofi](https://github.com/davatorium/rofi) with my custom made theme
 - Fonts: [Roboto](https://fonts.google.com/specimen/Roboto) for primary text, [JetBrains Mono](https://www.jetbrains.com/lp/mono/) for terminal, [Siji](https://github.com/stark/siji) for bar icons and [Terminus](http://terminus-font.sourceforge.net/) for bar.
 - GTK: [Fluent](https://www.pling.com/p/1477941/)
-- Icons: [Papirus](https://www.gnome-look.org/p/1166289/)
 - Editor: [vim](https://www.vim.org/)
 - Color scheme: customiuzed [OneDark](https://github.com/navarasu/onedark.nvim)
-- Wallpaper: available in my in my other [repository]()
 
 # Table of contents
 1. [Installation of Yay](#yayInstall)
@@ -75,13 +74,14 @@ Here is the list of the absolutely needed packages to install on your system.
 You can copy/paste these commands to your terminal to install all of the required packages all at once. (yay has to be install first.)
 
 ```sh
-sudo pacman -Syu && yay -Syu    # Update your system
+sudo pacman -Syu && yay -Syu    #Update your system
 
-sudo pacman -S alacritty alsa-utils awesome-terminal-fonts feh git i3-gaps i3lock openssh pavucontrol \
-playerctl polkit-gnome pulseaudio qt5ct rofi terminus-font vim xorg-xfd xorg-xinit xorg-xinput \
-zsh-syntax-highlighting zsh-theme-powerlevel10k     # Install the Arch packages
+sudo pacman -S alacritty alsa-utils awesome-terminal-fonts feh git i3-gaps i3lock openssh \
+pavucontrol playerctl polkit-gnome pulseaudio qt5ct rofi terminus-font vim xorg-xfd \
+xorg-xinit xorg-xinput zsh-syntax-highlighting zsh-theme-powerlevel10k #Install the Arch packages
 
-yay -S oh-my-zsh-git polybar qt5-styleplugins siji-git  # Install the AUR packages
+
+yay -S oh-my-zsh-git polybar qt5-styleplugins siji-git  #Install the AUR packages
 ```
 
 ## Recommended packages <a name="recommendedPackages"></a>
@@ -128,14 +128,14 @@ Here is the list of the recommended packages to install on your system.
 You can copy/paste these commands to your terminal to install all of the required packages all at once. (yay has to be install first.)
 
 ```sh
-sudo pacman -Syu && yay -Syu    # Update your system
+sudo pacman -Syu && yay -Syu    #Update your system
 
 sudo pacman -S chromium file-roller galculator gdb  gpick grub gvfs htop ksnip man-db \
 mupdf neofetch net-tools networkmanager nomacs ntfs-3g nvidia nvidia-settings qtcreator \
 thunar thunar-archive-plugin thunar-media-tags-plugin thunar-volman tumbler udiskie vlc \
 xdotool xorg-xrandr xorg-xsetroot   # Install the Arch packages
 
-yay -S google-chrome imagewriter spotify visual-studio-code-bin     # Install the AUR packages
+yay -S google-chrome imagewriter spotify visual-studio-code-bin     #Install the AUR packages
 ```
 
 ## A bit of issue-resolving and handy guides <a name="issues"></a>
