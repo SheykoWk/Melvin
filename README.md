@@ -15,8 +15,8 @@ Feel free to clone the repository and edit any of the files to fit your needs.
 - GTK: [Fluent](https://www.pling.com/p/1477941/)
 - Icons: [Papirus](https://www.gnome-look.org/p/1166289/)
 - Editor: [vim](https://www.vim.org/)
-- Color scheme: customiuzed [OneDark](https://github.com/navarasu/onedark.nvim)
-- Wallpaper; please see my [wallpapers](https://github.com/radimkolos/wallpapers) repository
+- Color scheme: customized [OneDark](https://github.com/navarasu/onedark.nvim)
+- Wallpaper: please see my [wallpapers](https://github.com/radimkolos/wallpapers) repository
 # Table of contents
 1. [Installation of Yay](#yayInstall)
 2. [Required packages](#requiredPackages)
